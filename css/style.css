@@ -1,0 +1,317 @@
+/* style.css */
+
+:root {
+  --primary-color: #080e1a; /* Azul marinho quase preto */
+  --secondary-color: #00bcd4; /* Azul ciano */
+  --accent-color: #ffffff; /* Branco */
+  --text-color: #ffffff; /* Branco */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color); /* Azul marinho quase preto */
+  box-shadow: 10,10,10,10;
+  padding: 10px 11px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.6);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--secondary-color); /* Azul ciano */
+  margin-left: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: var(--text-color); /* Branco */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color); /* Azul ciano */
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: center;
+}
+
+.burger div {
+  width: 25px;
+  height: 2px;
+  background: var(--text-color); /* Branco */
+  margin: 4px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.burger.toggle .line2 {
+  opacity: 0;
+}
+
+.burger.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.hero {
+  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color)); /* Gradiente discreto */
+  color: var(--text-color);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: auto;
+}
+
+.cta-button {
+  background: var(--secondary-color); /* Azul ciano */
+  color: var(--text-color);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #00a5bd; /* Azul ciano um pouco mais escuro */
+}
+
+.services {
+  padding: 50px 20px;
+  text-align: center;
+  background: var(--primary-color);
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-item {
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Branco com transparência */
+  transition: transform 0.3s ease;
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+}
+
+.service-item h3 {
+  padding: 20px 0 10px;
+  color: var(--accent-color);
+}
+
+.service-item p {
+  padding: 0 20px 20px;
+}
+
+.about {
+  background: var(--accent-color); /* Branco */
+  color: var(--primary-color); /* Azul marinho quase preto */
+  padding: 50px 20px;
+}
+
+.contact {
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 50px 20px;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.contact form input,
+.contact form textarea {
+  width: 96%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--secondary-color); /* Azul ciano */
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--primary-color); /* Azul marinho quase preto */
+  color: var(--text-color);
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color); /* Azul ciano */
+  box-shadow: 0 0 5px var(--secondary-color); /* Azul ciano */
+}
+
+.contact form button {
+  background: var(--secondary-color); /* Azul ciano */
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact form button:hover {
+  background: #00a5bd; /* Azul ciano um pouco mais escuro */
+}
+
+.footer {
+  background: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  margin: 0 10px;
+}
+
+.social-icon i {
+  font-size: 24px;
+}
+
+.instagram-icon {
+  color: #E1306C; /* Cor do Instagram */
+}
+
+.whatsapp-icon {
+  color: #25D366; /* Cor do WhatsApp */
+}
+
+.linkedin-icon {
+  color: #0077B5; /* Cor do LinkedIn */
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: var(--primary-color);
+    position: absolute;
+    top: 60px; /* Ajuste para baixo do header */
+    left: 0;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .service-item {
+    max-width: 90%;
+  }
+
+  .about, .contact {
+    padding: 30px 20px;
+  }
+
+  .contact form {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .logo {
+    margin-left: auto;
+    position: static;
+    transform: none;
+  }
+}
